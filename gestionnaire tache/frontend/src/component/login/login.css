@@ -1,0 +1,41 @@
+.sign{
+    padding-top:    10%;
+    padding-left: 40%;
+    background-color: aquamarineS;
+}
+.case{
+   
+    padding-bottom: 5%;
+    padding-left: 30%;
+}
+.labl{
+    padding-right: 5%;
+}
+.form{
+    background-color: rgb(240, 173, 173);
+  margin-top: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
+  box-shadow: 5px 5px 5px 5px;
+}
+.casebout{
+   
+    padding-bottom: 5%;
+    padding-left: 30%;
+}
+.casebout button{
+    border-radius: 40%;
+    padding: 2%;
+}
+.underline{
+    height: 6px;
+    width: 61px;
+    background-color: aqua;
+    border-radius: 6px;
+    margin-left: 40%;
+    margin-bottom: 8%;
+}
+input{
+    width: 200px;
+    height: 35px;
+}
