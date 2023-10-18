@@ -1,0 +1,26 @@
+.navbar-custom {
+    background-color:#ee6eae;
+    
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text,
+.navbar-custom .nav-link
+{
+    color: rgb(15, 15, 15);
+}
+.carousel-custom {
+    margin-top: 5%;
+}
+.c{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 10%;
+}
+.text-center{
+    margin: auto;
+}
+.liennavbar{
+    text-decoration: none;
+    color: black;
+    margin-left: 10%;
+}

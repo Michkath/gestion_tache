@@ -3,39 +3,79 @@
     padding-left: 40%;
     background-color: aquamarineS;
 }
-.case{
-   
-    padding-bottom: 5%;
-    padding-left: 30%;
-}
+
 .labl{
     padding-right: 5%;
 }
 .form{
-    background-color: rgb(240, 173, 173);
-  margin-top: 10%;
-  margin-left: 20%;
+background-color: white;
+  margin-top: 8%;
+  margin-left: 30%;
   margin-right: 20%;
-  box-shadow: 5px 5px 5px 5px;
+  padding-bottom: 1cm;
+  width: 10cm;
 }
+.tout{
+    background: linear-gradient(blue, 10%, pink);
+    padding: 1cm;
+}
+.toutl{
+    background: linear-gradient(blue, 10%, pink);
+    padding: 2cm;
+}
+
 .casebout{
-   
     padding-bottom: 5%;
     padding-left: 30%;
 }
-.casebout button{
-    border-radius: 40%;
+.bouton{
+    border-radius: 10cm;
     padding: 2%;
+    width: 50%;
+}
+.bouton:hover{
+    background: linear-gradient(blue, 10%, pink);
 }
 .underline{
     height: 6px;
     width: 61px;
-    background-color: aqua;
+    background-color: pink;
     border-radius: 6px;
     margin-left: 40%;
     margin-bottom: 8%;
 }
-input{
+.imput{
     width: 200px;
     height: 35px;
+    border-radius: 10cm;
+    margin-bottom: 1cm;
+    margin-left: 2cm;
+}
+
+.navbar-custom {
+    background-color:#ee6eae;
+}
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text,
+.navbar-custom .nav-link
+{
+    color: rgb(15, 15, 15);
+}
+.carousel-custom {
+    margin-top: 5%;
+    max-width: 65%;
+    margin-left: 17%;
+}
+.c{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 10%;
+}
+.text-center{
+    margin: auto;
+}
+.link{
+    text-decoration: none;
+    color: black;
+    margin-left: 30%;
 }

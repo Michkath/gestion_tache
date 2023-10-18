@@ -13,16 +13,14 @@ import './login.css'
   async function submit(e){
     e.preventDefault();
      try{
-      await axios.post("http://localhost:3000/api/users/login",{
+      await axios.post("http://localhost:3002/api/users/login",{
         email,password
       })
 
       .then((res)=>{
-        //console.log(res.date)
         if(res.data.token){
-          
           alert("utilisateur trouver")
-          naviguate('/home')
+          naviguate('/home',{state:{id:email}})
         }
       })
     }
@@ -31,6 +29,7 @@ import './login.css'
     }
   }
   return ( 
+    <div className="toutl">
     <div className="form">
     <div className="sign">
       <h4>Login</h4>
@@ -38,20 +37,18 @@ import './login.css'
     <div className="underline"></div>
 
     <div className="case">
-      <label className="labl">EMAIL </label>
-      <input type="email" placeholder="email" onChange={(e)=>{setemail(e.target.value)}}></input>
+      <input  className="imput" type="email" placeholder="  User Email" onChange={(e)=>{setemail(e.target.value)}}></input>
     </div>
 
     <div className="case">
-      <label className="labl">PASSWORD</label>
-      <input type="password" placeholder="password" onChange={(e)=>{setpassword(e.target.value)}}></input>
+      <input className="imput" type="password" placeholder="  Password" onChange={(e)=>{setpassword(e.target.value)}}></input>
     </div>
     <div className="casebout">
-      <button onClick={submit}>SUBMIT</button>
+      <button className="bouton" onClick={submit}>Login</button>
     </div>
-    <Link to= '/'>Signup</Link>
+    <Link className="link" to= '/'>Don't have an account?</Link>
   </div>
-  
+  </div>
  
     )
 };

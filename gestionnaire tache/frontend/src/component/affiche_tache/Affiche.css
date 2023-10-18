@@ -1,0 +1,56 @@
+ .put{
+    border-radius: 0%;
+    margin-top: 2cm;
+}
+.all{
+    display: flex;
+}
+.cas1{
+    margin-left: 5%;
+}
+.cas{
+    margin-left: 5%;
+}
+.bout{
+    margin-left: 10%;
+    margin-top: 2cm;
+}
+.tasks{
+    display: flex;
+    margin-top: 10%;
+    padding-bottom: 2%;
+    border-bottom: ridge;
+}
+
+.space{
+    padding-left: 10%;
+}
+.impu{
+    display: flex;
+    border-bottom: ridge;
+}
+
+.formulaire{
+    background: linear-gradient(to right, rgb(252, 122, 174));
+    width: 60%;
+    margin-left: 7cm;
+    box-shadow: 10cm;
+    margin-top: 3cm;
+}
+
+.bare{
+    background-color: rgb(234, 120, 44);
+    width: 6px;
+    height: 35px;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.to{
+    box-sizing: border-box;
+    margin-right: 8cm;
+}
+.toto{
+    background-color: white;
+    border-bottom: ridge;
+} 

@@ -31,9 +31,3 @@ exports.getall= (req,res,next)=>{
        
 };
 
-exports.trier=()=>{
-    Tâches
-        .find()
-        .then((taches)=>res.status(200).json({taches}))
-        .catch(error=> res.status(500).json({error}))
-};
