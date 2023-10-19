@@ -5,7 +5,7 @@ import "./Affiche.css"
 import Tasks from './Tasks';
 import Navbar from '../navbar/Navbar';
 
-const Affiche = () => {
+const Affiche = (e) => {
 
 const[tache,settache] = useState(['']);
 
@@ -17,7 +17,7 @@ const[tache,settache] = useState(['']);
 
   const [title, settitle] = useState("");
   const [description, setdescription] = useState("");
-   const[echeance,setecheance] = useState();
+   const[echeance,setecheance] = useState("");
 
   async function submit(e){
     e.preventDefault();
@@ -27,16 +27,17 @@ const[tache,settache] = useState(['']);
       title,description,echeance
     })
     .then(res=>{
-      if(res.data === "create"){
+      if(res.data === "tache enregistre"){
         alert("tache creer")
-        e.target.value = " ";
+        settitle("");setdescription("");setecheance("");
+
       }
     })
   }
   catch{
     console.log(e);
   }
-  e.target.value = " ";
+ 
 }
 
   return (
@@ -45,13 +46,13 @@ const[tache,settache] = useState(['']);
       <form >
         <div className='all'>
         <div className='cas1'>
-        <input type='text' value= {e.target.value }className='put' placeholder='Tâche Title' onChange={(e)=>{settitle(e.target.value)}}/>
+        <input type='text' value= {title}className='put' placeholder='Tâche Title' onChange={(e)=>{settitle(e.target.value)}}/>
         </div>
         <div className='cas'>
-        <input type='text' className='put' placeholder='Tâche Description' onChange={(e)=>{setdescription(e.target.value)}}/>
+        <input type='text' value= {description} className='put' placeholder='Tâche Description' onChange={(e)=>{setdescription(e.target.value)}}/>
         </div>
         <div className='cas'>
-        <input type='date' className='put' onChange={(e)=>{setecheance(e.target.value)}}/>
+        <input type='date' value= {echeance} className='put' onChange={(e)=>{setecheance(e.target.value)}}/>
         </div>
         <div className='cas'><button className='bout' onClick={submit} >ADD</button></div>
         <div className='cas'><button className='bout' >TRIER</button></div>
@@ -63,20 +64,17 @@ const[tache,settache] = useState(['']);
         <div className='toto'>
           <h4>Tasks List</h4>
        </div>
-       {/* { tache.map((i)=>{
-       return <li key={i.title}>{i.title}</li>
-      })} */}
+       
        {tache.map((i)=>{
-        return <Tasks>{i.title}</Tasks> 
+        return <Tasks key={i._id}>{i.title}</Tasks> 
        })}
+       {/* { strSort(tache)}
+        */}
 
       </div>
     </div>
   )
 }
-// { tache.map((i)=>{
-//   return <li key={i.title}>{i.title}</li>
-//  })}
 
 
 export default Affiche

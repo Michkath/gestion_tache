@@ -1,4 +1,4 @@
- .put{
+.put{
     border-radius: 0%;
     margin-top: 2cm;
 }
@@ -15,29 +15,22 @@
     margin-left: 10%;
     margin-top: 2cm;
 }
-.tasks{
+ .tasks{
     display: flex;
     margin-top: 10%;
     padding-bottom: 2%;
     border-bottom: ridge;
 }
-
 .space{
     padding-left: 10%;
 }
-.impu{
-    display: flex;
-    border-bottom: ridge;
-}
-
-.formulaire{
+ .formulaire{
     background: linear-gradient(to right, rgb(252, 122, 174));
     width: 60%;
     margin-left: 7cm;
     box-shadow: 10cm;
     margin-top: 3cm;
 }
-
 .bare{
     background-color: rgb(234, 120, 44);
     width: 6px;
@@ -45,12 +38,53 @@
     margin-left: 5%;
     margin-top: 2%;
 }
-
-.to{
-    box-sizing: border-box;
-    margin-right: 8cm;
-}
 .toto{
     background-color: white;
     border-bottom: ridge;
-} 
+}  
+
+
+/* tacks css */
+
+.impu{
+    display: flex;
+    
+}
+.p{
+    display: flex;
+    border-bottom: ridge;
+    padding-bottom: 1%;
+}
+ .to{
+    box-sizing: border-box;
+    margin-right: 8cm;
+    width: 20%;
+}
+.boutsucces{
+    background-color: rgb(70, 110, 70);
+    margin-top: 5%;
+}
+.boutsucces:hover{
+    background-color: rgb(25, 238, 25);
+    margin-top: 5%;
+}
+.boutdelete:hover{
+background-color: rgb(237, 46, 46);
+margin-top: 5%;
+
+}
+.boutdelete{
+    background-color: rgb(174, 31, 31);
+    margin-top: 5%;
+    
+    }
+.boutupdate{
+    background-color: rgb(23, 23, 118);
+    margin-top: 5%;
+
+}
+.boutupdate:hover{
+    background-color: rgb(45, 45, 234);
+    margin-top: 5%;
+
+}

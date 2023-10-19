@@ -8,7 +8,7 @@ exports.create = (req, res, next) => {
     echeance: req.body.echeance,
   });
   tache.save()
-    .then(res.status(200).json({message: "tache enregistre"}))
+    .then(res.status(200).json("tache enregistre"))
     .catch(error => res.status(401).json({error}))
 };
 
