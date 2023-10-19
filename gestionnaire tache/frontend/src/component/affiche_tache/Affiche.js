@@ -1,80 +1,77 @@
-import React, { useState } from 'react'
-import { useEffect} from 'react'
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import "./Affiche.css"
+import "./Affiche.css";
 import Tasks from './Tasks';
 import Navbar from '../navbar/Navbar';
 
-const Affiche = (e) => {
+const Affiche = () => {
+  const [tache, setTache] = useState([]);
 
-const[tache,settache] = useState(['']);
-
-  useEffect(()=>{
+  useEffect(() => {
     axios.get("http://localhost:3002/api/taches/getall")
-    .then(tache=> settache(tache.data))
-    .catch(err=>console.log(err))
-  },[])
+      .then((response) => {
+        setTache(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
 
-  const [title, settitle] = useState("");
-  const [description, setdescription] = useState("");
-   const[echeance,setecheance] = useState("");
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const [echeance, setEcheance] = useState("");
 
-  async function submit(e){
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    try{
-    await axios.post("http://localhost:3002/api/taches/create",{
-      title,description,echeance
-    })
-    .then(res=>{
-      if(res.data === "tache enregistre"){
-        alert("tache creer")
-        settitle("");setdescription("");setecheance("");
 
+    try {
+      const response = await axios.post("http://localhost:3002/api/taches/create", {
+        title,
+        description,
+        echeance
+      });
+
+      if (response.data === "tache enregistre") {
+        alert("Tâche créée");
+        setTitle("");
+        setDescription("");
+        setEcheance("");
       }
-    })
-  }
-  catch{
-    console.log(e);
-  }
- 
-}
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   return (
     <div>
-      <Navbar/>
-      <form >
+      <Navbar />
+      <form>
         <div className='all'>
-        <div className='cas1'>
-        <input type='text' value= {title}className='put' placeholder='Tâche Title' onChange={(e)=>{settitle(e.target.value)}}/>
-        </div>
-        <div className='cas'>
-        <input type='text' value= {description} className='put' placeholder='Tâche Description' onChange={(e)=>{setdescription(e.target.value)}}/>
-        </div>
-        <div className='cas'>
-        <input type='date' value= {echeance} className='put' onChange={(e)=>{setecheance(e.target.value)}}/>
-        </div>
-        <div className='cas'><button className='bout' onClick={submit} >ADD</button></div>
-        <div className='cas'><button className='bout' >TRIER</button></div>
-
+          <div className='cas1'>
+            <input type='text' value={title} className='put' placeholder='Tâche Title' onChange={(e) => setTitle(e.target.value)} />
+          </div>
+          <div className='cas'>
+            <input type='text' value={description} className='put' placeholder='Tâche Description' onChange={(e) => setDescription(e.target.value)} />
+          </div>
+          <div className='cas'>
+            <input type='date' value={echeance} className='put' onChange={(e) => setEcheance(e.target.value)} />
+          </div>
+          <div className='cas'><button className='bout' onClick={handleSubmit}>ADD</button></div>
+          <div className='cas'><button className='bout'>TRIER</button></div>
         </div>
       </form>
 
-     <div className='formulaire'>
+      <div className='formulaire'>
         <div className='toto'>
           <h4>Tasks List</h4>
-       </div>
-       
-       {tache.map((i)=>{
-        return <Tasks key={i._id}>{i.title}</Tasks> 
-       })}
-       {/* { strSort(tache)}
-        */}
+        </div>
 
+        {tache.map((task) => (
+          <Tasks key={task._id}>{task.title}</Tasks>
+        ))}
       </div>
     </div>
-  )
+  );
 }
 
-
-export default Affiche
+export default Affiche;
