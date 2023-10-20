@@ -18,7 +18,7 @@ function App() {
         <Route index element={<Signin/>} />
          <Route path="login" element={<Login />} />
           <Route path="home" element={<Home />} /> 
-          <Route path="Affiche_tache" element={<Affiche_tache />} /> 
+          <Route path="affiche_tache" element={<Affiche_tache />} /> 
         </Routes>
       </BrowserRouter>  
     </div>
