@@ -14,8 +14,10 @@ exports.create = (req, res, next) => {
 
 exports.delete_tache = (req,res,next)=>{
     Tâches.deleteOne({_id: req.params.id})
+    console.log("id", _id)
         .then(res.status(200).json({message:'tache delete '}))
         .catch(error=> res.status(500).json({error}))
+        
 }
 
 exports.update = (req,res,next)=>{

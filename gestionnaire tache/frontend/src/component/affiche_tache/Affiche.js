@@ -16,6 +16,10 @@ const Affiche = () => {
         console.error(error);
       });
   }, []);
+  // console.log(tache[0]._id)
+
+  // const id = response.data._id
+  // console.log("id",id);
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -67,7 +71,7 @@ const Affiche = () => {
         </div>
 
         {tache.map((task) => (
-          <Tasks key={task._id}>{task.title}</Tasks>
+          <Tasks key={task._id} taskId={task._id}>{task.title}</Tasks>
         ))}
       </div>
     </div>
