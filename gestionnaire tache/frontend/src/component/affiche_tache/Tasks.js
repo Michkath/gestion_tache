@@ -1,32 +1,20 @@
 import React, { useState } from "react";
 import "./Affiche.css";
-import axios from "axios";
-import { useNavigate } from "react-router-dom";
+// import axios from "axios";
+// import { useNavigate } from "react-router-dom";
 
 
-const Tasks = ({ children, taskId }) => {
+const Tasks = ({ children, taskId, onDelete }) => {
   const [isDone, setIsDone] = useState(false);
   const handleSuccess = () => {
     setIsDone(!isDone);
   };
 
-  const naviguate = useNavigate()
+  // const naviguate = useNavigate()
   // console.log("taskId", taskId)
 
-  const deletefonc = async (e) => {
-    try {
-      await axios
-        .delete(`http://localhost:3002/api/taches/delete/${taskId}`)
-        // console.log("taskId", taskId)
-
-        .then((response) => {
-          alert("")
-          naviguate('/affiche_tache')
-          
-        });
-    } catch {
-      console.log(e);
-    }
+  const deletefonc = () => {
+    onDelete(taskId); 
   };
 
   return (

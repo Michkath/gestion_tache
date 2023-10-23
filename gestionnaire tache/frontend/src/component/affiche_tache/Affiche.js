@@ -8,6 +8,31 @@ const Affiche = () => {
   const [tache, setTache] = useState([]);
 
   useEffect(() => {
+    fetchTaches(); 
+  }, []);
+
+  const fetchTaches = () => {
+    axios.get("http://localhost:3002/api/taches/getall")
+      .then((response) => {
+        setTache(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  const handleDelete = (taskId) => {
+    axios.delete(`http://localhost:3002/api/taches/delete/${taskId}`)
+      .then(() => {
+        
+        fetchTaches();
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  useEffect(() => {
     axios.get("http://localhost:3002/api/taches/getall")
       .then((response) => {
         setTache(response.data);
@@ -40,6 +65,7 @@ const Affiche = () => {
         setTitle("");
         setDescription("");
         setEcheance("");
+        fetchTaches();
       }
     } catch (error) {
       console.error(error);
@@ -71,7 +97,7 @@ const Affiche = () => {
         </div>
 
         {tache.map((task) => (
-          <Tasks key={task._id} taskId={task._id}>{task.title}</Tasks>
+          <Tasks key={task._id} taskId={task._id} onDelete={handleDelete}>{task.title}</Tasks>
         ))}
       </div>
     </div>
