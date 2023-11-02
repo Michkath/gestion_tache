@@ -52,6 +52,8 @@ background-color: white;
     margin-left: 2cm;
 }
 
+/* home css */
+
 .navbar-custom {
     background-color:#ee6eae;
 }
@@ -61,10 +63,14 @@ background-color: white;
 {
     color: rgb(15, 15, 15);
 }
-.carousel-custom {
+/* .carousel-custom {
     margin-top: 5%;
+    max-height: 10%;
     max-width: 65%;
     margin-left: 17%;
+} */
+.carousel-custom h3{
+    color: #020202;
 }
 .c{
     display: flex;
@@ -79,3 +85,27 @@ background-color: white;
     color: black;
     margin-left: 30%;
 }
+.second{
+    /* background-color: black; */
+    /* width: 100%;
+    height: 500%; */
+    margin-top:  10%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10%;
+}
+.img{
+     width: 200px; height: 200px; border-radius: 100px;
+}
+/* .img h6{
+    text-align: left;
+} */
+.textaftercarousel{
+    padding-top: 10%;
+    text-align: center;
+    color: #ee6eae;
+}
+
+.cart{
+    width: 18rem;
+} 

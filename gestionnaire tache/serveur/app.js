@@ -1,10 +1,15 @@
 const express = require('express');
-bodyParser = require('body-parser'),
+bodyParser = require('body-parser');
+const authori = require("./middleweare/authmiddleweare")
 cors = require('cors');
 
 
 // serveur
 const app = express();
+
+const cookieParser = require("cookie-parser");
+app.use(cookieParser());
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 var corsOptions = {

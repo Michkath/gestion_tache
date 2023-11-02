@@ -1,6 +1,7 @@
 import React from 'react';
 import './navbar.css'
 import { Link } from 'react-router-dom';
+import Cookies from 'js-cookie';
 const Navbar = () => {
   return (
     <nav className="navbar navbar-custom navbar-expand-lg">
@@ -11,18 +12,14 @@ const Navbar = () => {
       </button>
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="navbar-nav">
-          <Link className='liennavbar' to="/affiche_tache"> Tache </Link>
-          <Link  className='liennavbar' to='/login' >Connection</Link>
-          <Link className='liennavbar' to='/home'>HOME </Link>
-          {/* <a className="nav-link active" aria-current="page" href="#">Home</a>
-          <a className="nav-link" href="#">Tache</a> */}
-         {/* /= <a className="nav-link" href="#">Pricing</a> */}
+         <Link className='liennavbar' to="/affiche_tache"> Tâche </Link>
+          <Link className='liennavbar'to='/home'>Home</Link>
+          <Link className='liennavbar' to='/login' onClick={Cookies.remove('userInfo')}>Déconnection</Link>
         </div>
       </div>
     </div>
   </nav>
   )
 }
-
 export default Navbar
 

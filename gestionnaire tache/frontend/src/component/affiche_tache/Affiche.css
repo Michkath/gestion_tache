@@ -1,93 +1,148 @@
-.put{
+.page_tache{
+    background-color: rgba(240, 233, 233, 0.5);
+border: 1px solid rgba(255, 255, 255, 0.5);
+box-shadow: 0px 0px 10px #ee6eae;
+border-radius: 2cm;
+/* opacity: 0.5; */
+width: 1000px;
+    margin: 8%;
+}
+.page_tache h1{
+text-align: center;
+color: #ee6eae;
+margin-top: 2%;
+}
+
+.put {
     border-radius: 0%;
     margin-top: 2cm;
 }
-.all{
+
+.all {
     display: flex;
+    justify-content: space-around;
 }
-.cas1{
-    margin-left: 5%;
+
+/* .cas1 {
+    margin-left: 8%;
 }
-.cas{
-    margin-left: 5%;
-}
-.bout{
+
+.cas {
+    margin-left: 8%;
+} */
+
+.bout {
     margin-left: 10%;
     margin-top: 2cm;
 }
- .tasks{
+.bout:hover{
+    background-color: #9b7287;
+}
+
+.tasks {
     display: flex;
     margin-top: 10%;
     padding-bottom: 2%;
     border-bottom: ridge;
 }
-.space{
+
+/* .space{
     padding-left: 10%;
-}
- .formulaire{
+} */
+.formulaire {
     background: linear-gradient(to right, rgb(252, 122, 174));
     width: 60%;
-    margin-left: 7cm;
+    margin-left: 5cm;
     box-shadow: 10cm;
-    margin-top: 3cm;
+     margin-top: 2cm; 
 }
-.bare{
+
+.bare {
     background-color: rgb(234, 120, 44);
     width: 6px;
     height: 35px;
     margin-left: 5%;
     margin-top: 2%;
 }
-.toto{
-    background-color: white;
+
+.toto {
+    /* background-color: white; */
     border-bottom: ridge;
-}  
+}
 
 
 /* tacks css */
 
-.impu{
+.impu {
     display: flex;
-    
+    /* width: 20%; */
 }
-.p{
+
+.p {
     display: flex;
     border-bottom: ridge;
-    padding-bottom: 1%;
+    /* margin-bottom: 1%; */
 }
- .to{
-    box-sizing: border-box;
-    margin-right: 8cm;
-    width: 20%;
-}
-.boutsucces{
-    background-color: rgb(70, 110, 70);
-    margin-top: 5%;
-}
-.boutsucces:hover{
-    background-color: rgb(25, 238, 25);
-    margin-top: 5%;
-}
-.boutdelete:hover{
-background-color: rgb(237, 46, 46);
-margin-top: 5%;
 
+.title {
+    /* box-sizing: border-box; */
+    margin-right: 5cm;
+    width: 10%;
 }
-.boutdelete{
-    background-color: rgb(174, 31, 31);
-    margin-top: 5%;
-    
-    }
-.boutupdate{
-    background-color: rgb(23, 23, 118);
-    margin-top: 5%;
 
+.boutsucces {
+    color: rgb(31, 146, 31);
+    width: 20px;
+    height: 30px;
+    margin: 25%;
+    margin-left: 10px;
 }
-.boutupdate:hover{
-    background-color: rgb(45, 45, 234);
-    margin-top: 5%;
 
+.boutdelete {
+    color: rgb(223, 44, 44);
+    width: 20px;
+    height: 30px;
+    margin: 25%;
+    margin-left: 10px;
 }
+
+.boutupdate {
+    color: rgb(13, 13, 230);
+    width: 20px;
+    height: 30px;
+    margin: 25%;
+    margin-left: 10px;
+}
+
+.boutsucces:hover {
+    color: rgb(25, 238, 25);
+    margin-top: 50%;
+}
+
+.boutdelete:hover {
+    color: rgb(132, 32, 32);
+    margin-top: 50%;
+}
+
+.boutupdate:hover {
+    color: rgb(7, 7, 142);
+    margin-top: 50%;
+}
+
 .done {
     text-decoration: line-through;
-  }
+}
+
+h6{
+    margin-top: 5%;
+}
+
+.infodate {
+    margin-top: 5%;
+    margin-right: 1%;
+    /* width: 90cm; */
+}
+
+.date {
+    margin-top: 5%;
+}

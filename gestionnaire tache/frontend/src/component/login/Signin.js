@@ -19,7 +19,7 @@ const Signin = () => {
       .then((res)=>{
         if(res.data === "utilisateur creer"){
           alert("utilisateur creer")
-          redict('/Home',{state:{id:email}})
+          redict('/login',{state:{id:email}})
         }
       })
     }

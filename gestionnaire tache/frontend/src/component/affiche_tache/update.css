@@ -1,0 +1,62 @@
+
+.fondform{
+background-color: rgba(233, 145, 183, 0.989);
+  margin-top: 3%;
+  margin-left: 30%;
+  margin-right: 20%;
+  padding-bottom: 1cm;
+  width: 12cm;
+  border-radius: 20px;
+}
+
+.updatetitle{
+    display: inline-block;                /* modèle de boîte en ligne */
+    padding-right: 1em;                   /* un peu d'espace pour la transition */
+    padding-left: 80%;                   /* placement à droite du conteneur */
+    white-space: nowrap;                  /* pas de passage à la ligne */
+    animation: defilement-rtl 5s infinite linear;
+}
+@keyframes defilement-rtl {
+    0% {
+      transform: translate3d(0,0,0);      /* position initiale à droite */
+    }
+    100% {
+      transform: translate3d(-70%,0,0);  /* position finale à gauche */
+    }
+  }
+
+.fond{
+    background: white;
+    padding: 2cm;
+}
+
+.caseboutt{
+    padding-bottom: 5%;
+    padding-left: 30%;
+}
+.boutt{
+    border-radius: 10cm;
+    padding: 2%;
+    width: 50%;
+    margin-top: 20%;
+}
+
+.boutt:hover{
+    background: linear-gradient(rgba(231, 206, 217, 0.989), 10%, #ee6eae);
+}
+.putt{
+    margin-top: 10%;
+    width: 200px;
+    height: 35px;
+    border-radius: 10cm;
+    margin-left: 2cm;
+}
+
+label{
+    padding-left: 5%;
+    width: 20%;
+}
+.updatelink{
+    text-decoration: none;
+    color: black;
+}
