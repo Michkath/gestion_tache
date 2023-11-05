@@ -39,4 +39,7 @@ app.use("/api/users", UserRoute);
 const tacheroute = require("./routes/tache.route")
 app.use("/api/taches", tacheroute)
 
+const calendarroute = require("./routes/calendar.route")
+app.use("/api/calendar", calendarroute)
+
 module.exports = app;

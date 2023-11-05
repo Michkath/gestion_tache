@@ -1,12 +1,14 @@
 
 /* card css */
 .grid{
-    background-color: rgb(197, 205, 216);
-    padding-top: 5%;
-    width: 10cm;
-    height: 5cm;
+    background-color: rgb(177, 181, 186);
+    padding-top: 1%;
+    width: 8cm;
+    height: 3cm;
+    padding-bottom: 2%;
+
 }
-.grid h5{
+.grid h6{
     margin-left: 2em;
 }
 

@@ -7,7 +7,7 @@ const authori = require("../middleweare/authmiddleweare")
 router.post("/create",tachectrl.create)
 
 //route creation de tache
-router.get("/getall",authori.Authorization, tachectrl.getall)
+router.get("/getall", tachectrl.getall)
 
 //route update tache
 router.put("/update/:id",tachectrl.update)

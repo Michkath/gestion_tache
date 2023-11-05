@@ -27,23 +27,19 @@ const Login = () => {
         email, password
       })
         .then((res) => {
-          
-          const userInfo = {
-            id: res.data.user_id,
-            token: res.data.token
-        }
-        
-        
-        // Convertit l'objet userInfo en une chaîne JSON
-        const userInfoStr = JSON.stringify(userInfo);
-        
-        // Stocke la chaîne JSON dans un cookie
-        Cookies.set('userInfo', userInfoStr);
-        console.log(userInfo.id);
-        console.log(userInfo.token);
 
-        naviguate('/home')
-      })
+            naviguate('/home')
+
+          if (res.data.user_id) {
+
+          //  Cookies.set('authToken', res.data.token, { expires: 7 })
+            Cookies.set('userid', res.data.user_id, { expires: 7 })
+            alert(document.cookie())
+
+            // const token = Cookies.get('authToken');
+
+          }
+        })
     }
     catch {
       console.log(e);

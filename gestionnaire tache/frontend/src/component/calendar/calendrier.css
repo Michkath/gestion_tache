@@ -1,0 +1,11 @@
+.container{
+    margin-top: 5%;
+    border: solid;
+    border-top-color: orangered;
+    border-top-width: 5px;
+    padding-top: 4%;
+    padding-bottom: 3%;
+    border-bottom-color: rgb(190, 185, 185);
+    border-left-color: rgb(190, 185, 185);
+    border-right-color: rgb(190, 185, 185);
+}

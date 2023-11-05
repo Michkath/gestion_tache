@@ -14,6 +14,7 @@ const Navbar = () => {
         <div className="navbar-nav">
          <Link className='liennavbar' to="/affiche_tache"> Tâche </Link>
           <Link className='liennavbar'to='/home'>Home</Link>
+          <Link className='liennavbar' to='/calendar' >Calendar</Link>
           <Link className='liennavbar' to='/login' onClick={Cookies.remove('userInfo')}>Déconnection</Link>
         </div>
       </div>

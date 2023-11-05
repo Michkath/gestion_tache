@@ -12,26 +12,8 @@ import Img3 from "./Img3.png"
 
 
 const Home = () => {
-  const userInfoStr = Cookies.get('userInfo');
-console.log(userInfoStr);
 
-let userInfo;
-let userid;
-
-if (userInfoStr) {
-    try {
-        userInfo = JSON.parse(userInfoStr);
-        console.log(userInfo.id);
-
-        userid = userInfo.id;
-        console.log("aaa", userid);
-    } catch (error) {
-        console.error("Erreur lors de la conversion du cookie en objet :", error);
-    }
-} else {
-    console.log("Le cookie 'userInfo' n'existe pas ou a expiré");
-}
-
+  const userid = Cookies.get('userid');
   const [usermail, setusermail] = useState("")
 
   const getuseremail = () => {
@@ -78,24 +60,24 @@ if (userInfoStr) {
       <h4 className='textaftercarousel'>BONNE ARRIV22</h4>
         <div className='second'>
 
-          <div className="card"style={{width: 18 +'rem'}} >
-            <img src={Img1} className="card-img-top" alt="..." />
-            <div className="card-body">
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <div class="card"style={{width: 18 +'rem'}} >
+            <img src={Img1} class="card-img-top" alt="..." />
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
           </div>
 
-          <div className="card"style={{width: 18 +'rem'}} >
-            <img src={Img1} className="card-img-top" alt="..." />
-            <div className="card-body">
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <div class="card"style={{width: 18 +'rem'}} >
+            <img src={Img1} class="card-img-top" alt="..." />
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
           </div>
 
-          <div className="card"style={{width: 18 +'rem'}} >
-            <img src={Img1} className="card-img-top" alt="..." />
-            <div className="card-body">
-              <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <div class="card"style={{width: 18 +'rem'}} >
+            <img src={Img1} class="card-img-top" alt="..." />
+            <div class="card-body">
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             </div>
           </div>
           </div>

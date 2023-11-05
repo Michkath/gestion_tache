@@ -1,14 +1,20 @@
 import React from 'react'
 import './card.css'
-const Card = () => {
+const Card = ({bool,date,description,title}) => {
   return (
+
     <div>
+        
+{ bool &&
       <form className='grid'>
-        <h5> <b>TITLE:  </b>bissous</h5>
-        <h5> <b>DESCRIPTION:  </b>sur le front </h5>
-        <h5> <b>ECHEANCE: </b>10/20/2023</h5>
+        <h6> Title: {title}</h6>
+        <h6> Description:  {description}</h6>
+        <h6> Echance: {date}</h6>
       </form>
+      }
+
     </div>
+
   )
 }
 

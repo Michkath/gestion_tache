@@ -31,7 +31,7 @@ const Affiche = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [echeance, setEcheance] = useState("");
-  //  var userid = Cookies.get('userid');
+   var userid = Cookies.get('userid');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -85,11 +85,10 @@ const Affiche = () => {
           </div>
 
           {tache.map((task) => (
-            <Tasks key={task._id} taskId={task._id} date={task.echeance} onfetch={fetchTaches}>{task.title}</Tasks>
+            <Tasks key={task._id} taskId={task._id} date={task.echeance} description={task.description} onfetch={fetchTaches}>{task.title}</Tasks>
           ))}
         </div>
       </div>
-      {/* <Card/> */}
 
     </div>
     
