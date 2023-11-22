@@ -17,7 +17,10 @@ const Login = () => {
   const naviguate = useNavigate();
   // const [cookies, setCookies, removeCookie] = useCookies();
 
+const bouge =()=>{
+  naviguate('/home')
 
+}
 
   async function submit(e) {
 
@@ -28,15 +31,13 @@ const Login = () => {
       })
         .then((res) => {
 
-            naviguate('/home')
+            // naviguate('/home')
 
           if (res.data.user_id) {
 
-          //  Cookies.set('authToken', res.data.token, { expires: 7 })
-            Cookies.set('userid', res.data.user_id, { expires: 7 })
+            localStorage.setItem('token', res.data.token);
+            Cookies.set('userid', res.data.user_id, { expires: 7 })  
             alert(document.cookie())
-
-            // const token = Cookies.get('authToken');
 
           }
         })
@@ -44,21 +45,16 @@ const Login = () => {
     catch {
       console.log(e);
     }
+    bouge();
   }
 
-  //   const value = useMemo(
-  //     () => ({
-  //         cookies,
-  //     }),
-  //     [cookies]
-  // );
-
+  
   const value = "toto";
   return (
 
     // <Context.Provider value={value}>
     <div className="toutl">
-      <Navbar />
+      {/* <Navbar /> */}
 
       <div className="form">
         <div className="sign">
@@ -76,7 +72,7 @@ const Login = () => {
         <div className="casebout">
           <button className="bouton" onClick={submit}>Login</button>
         </div>
-        <Link className="link" to='/'>Don't have an account?</Link>
+        <Link className="link" to='/Signin'>Don't have an account?</Link>
       </div>
     </div>
 

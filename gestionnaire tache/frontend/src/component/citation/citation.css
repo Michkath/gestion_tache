@@ -1,0 +1,18 @@
+.plus h4{
+    text-align: center;
+    color: palevioletred;
+    text-decoration:underline;
+    margin-top: 10%;
+}
+.cit{
+    width: 50%;
+margin-left: 25%;
+}
+.cit h6{
+    margin-top: 10%;
+text-align: center;
+text-align-last: center;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: large;
+font-style: italic;
+}

@@ -1,13 +1,15 @@
 import { React, useState, useEffect } from 'react';
 import { json, useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
+// import { useEffect } from 'react';
 import "./update.css"
 
 import Navbar from '../navbar/Navbar';
 
 
 const Update = () => {
- 
+  const token = localStorage.getItem('token');
+
 
  
   const _id = useParams();
@@ -19,7 +21,13 @@ const Update = () => {
   const [echeance, setEcheance] = useState("");
 
   const handlesetinfo = () => {
-    axios.get(`http://localhost:3002/api/taches/getinfowithtacheid/${_id.id}`)
+    axios.get(`http://localhost:3002/api/taches/getinfowithtacheid/${_id.id}`,{
+      headers: {
+        // 'Content-Type': 'application/json' ,
+        Authorization:'Bearer ' + token
+
+
+      }},)
     
       .then((info) => {
          setTitle(info.data.message[0].title)
@@ -38,7 +46,14 @@ const Update = () => {
       title,
       description,
       echeance
-    })
+    },
+    {
+      headers: {
+        // 'Content-Type': 'application/json' ,
+        Authorization:'Bearer ' + token
+
+
+      }},)
       .then((res) => {
           navigue('/affiche_tache');
       })
@@ -47,12 +62,16 @@ const Update = () => {
       });
   };
 
+  useEffect(() => {
+    handlesetinfo();
+  }, []);
+
   return (
       <div >
         <Navbar/>
         <div className="fond">
             <div className="fondform">
-            <button onClick={handlesetinfo}>reset</button> 
+            {/* <button onClick={handlesetinfo}>reset</button>  */}
               <div className='updatetitle'> <h3>UPDATE TACHE</h3> </div>
               <div className="ca">
                 <label>TITLE:</label>

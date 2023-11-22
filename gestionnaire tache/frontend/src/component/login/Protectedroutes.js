@@ -20,25 +20,26 @@ import Cookies from "js-cookie";
 
 const Protectedroutes = () => {
 
-    const userInfoStr = Cookies.get('userInfo');
-    let userInfo;
-    let user;
+    // const userInfoStr = Cookies.get('userInfo');
+    // let userInfo;
+    // let user;
 
-    if (userInfoStr) {
-        try {
-            userInfo = JSON.parse(userInfoStr);
-            console.log(userInfo.id);
-            console.log(userInfo.token);
+    // if (userInfoStr) {
+    //     try {
+    //         userInfo = JSON.parse(userInfoStr);
+    //         console.log(userInfo.id);
+    //         console.log(userInfo.token);
 
-            user = userInfo.token
-        } catch (error) {
-            console.error("Erreur lors de la conversion du cookie en objet :", error);
-        }
-    } else {
-        console.log("Le cookie 'userInfo' n'existe pas ou a expiré");
-    }
+    //         user = userInfo.token
+    //     } catch (error) {
+    //         console.error("Erreur lors de la conversion du cookie en objet :", error);
+    //     }
+    // } else {
+    //     console.log("Le cookie 'userInfo' n'existe pas ou a expiré");
+    // }
+    const token = localStorage.getItem('token');
 
-    return user ? <Outlet/> : <Login/>
+    return token ? <Outlet/> : <Login/>
 }
 
 export default Protectedroutes

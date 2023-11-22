@@ -5,6 +5,7 @@ exports.create = (req, res, next) => {
     title: req.body.title,
     start: req.body.start,
     end: req.body.end,
+    userid:req.body.userid
   });
 
   calendars.save()
@@ -25,3 +26,14 @@ exports.getall = (req, res, next) => {
         res.status(500).json({ error });
       });
   };
+
+  
+exports.delete_tachecalendar = (req, res, next) => {
+  calendar.deleteOne({ _id: req.params.id })
+    .then(() => {
+      res.status(200).json({ message: 'tache delete' });
+    })
+    .catch(error => {
+      res.status(500).json({ error });
+    });
+};

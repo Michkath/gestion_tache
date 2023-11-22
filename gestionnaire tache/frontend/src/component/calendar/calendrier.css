@@ -1,11 +1,21 @@
 .container{
     margin-top: 5%;
     border: solid;
-    border-top-color: orangered;
+    border-top-color: deeppink;
     border-top-width: 5px;
     padding-top: 4%;
+    /* width: 80%; */
     padding-bottom: 3%;
     border-bottom-color: rgb(190, 185, 185);
     border-left-color: rgb(190, 185, 185);
     border-right-color: rgb(190, 185, 185);
+}
+
+/* froms calendar */
+
+.formscalendar{
+    display: flex;
+    margin-top: 5%;
+    width: 80%;
+    margin-left: 0%;
 }

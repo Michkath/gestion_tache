@@ -5,7 +5,7 @@ const authori = require("../middleweare/authmiddleweare")
 
 
 exports.signin = (req, res, next) => {
-    // console.log(...req.body)
+   
     const {Name,email,password} = req.body
   bcrypt
     .hash(password, 10)
@@ -40,10 +40,6 @@ exports.login = (req, res, next)=>{
                   const  token = jwt.sign( {user_id: user._id }, "RAMDOM_TOKEN_SECRET", { expiresIn: '24h'})
                     res
                     .status(200)
-                    .cookie("access_token", token, {
-                      httpOnly: true,
-                      secure: process.env.NODE_ENV === "production",
-                    })
                     .json({
                         user_id: user._id,  
                         token: token,
@@ -58,7 +54,7 @@ exports.login = (req, res, next)=>{
 exports.getall = (req,res,next)=>{
     Users
         .find()
-        .then((users)=>res.status(200).json({users}))
+        .then((users)=>res.status(200).json(users))
         .catch(error=> res.status(500).json({error}))
 }
 

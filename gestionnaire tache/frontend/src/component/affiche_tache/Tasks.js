@@ -3,12 +3,13 @@ import "./Affiche.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { AiFillDelete, AiFillEdit, AiFillSafetyCertificate ,AiFillInfoCircle} from 'react-icons/ai';
-import Card from "../card/Card";
+import Card from "../Admin/Card";
 import{RiDeleteBin6Line} from 'react-icons/ri'
 
 
 
-const Tasks = ({ children, taskId,date,description,onfetch }) => {
+const Tasks = ({ children, taskId,date,description,onfetch,trifetch }) => {
+  const token = localStorage.getItem('token');
 
    const [isDone, setIsDone] = useState(false);
   const [appear,setappear] = useState(false);
@@ -23,9 +24,16 @@ const handleplus=()=>{
 }
 
   const handleDelete = () => {
-    axios.delete(`http://localhost:3002/api/taches/delete/${taskId}`)
+    axios.delete(`http://localhost:3002/api/taches/delete/${taskId}`,{
+      headers: {
+        // 'Content-Type': 'application/json' ,
+        Authorization: 'Bearer ' + token
+
+
+      }},)
       .then(() => {
         onfetch();
+        trifetch();
       })
       .catch((error) => {
         console.error(error);

@@ -70,7 +70,8 @@ background-color: white;
     margin-left: 17%;
 } */
 .carousel-custom h3{
-    color: #020202;
+    color: black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .c{
     display: flex;
@@ -102,10 +103,20 @@ background-color: white;
 } */
 .textaftercarousel{
     padding-top: 10%;
+    /* font-style: inherit; */
     text-align: center;
-    color: #ee6eae;
+    color:black;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.cart{
+.card{
     width: 18rem;
 } 
+.card:hover{
+    background-color: rgba(240, 233, 233, 0.5);
+    border: 1px solid  #2a2829;
+    box-shadow: 0px 0px 10px #2a2829;
+    /* border-radius: 2cm; */
+} 
+

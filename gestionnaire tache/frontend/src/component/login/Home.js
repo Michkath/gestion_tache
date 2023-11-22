@@ -34,50 +34,40 @@ const Home = () => {
       <Navbar />
       <div id="carouselExampleCaptions" className="carousel carousel-custom slide" data-bs-ride="carousel">
         <div className="carousel-indicators">
-          {/* <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button> */}
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img src={Img3} className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
-            <h3>Hello {usermail} bienvenue sur votre appli de gestion de tacheS</h3>
+            <h3> {usermail} C’est un grand plaisir pour nous de vous avoir à bord ! </h3>
 
             </div>
           </div>
 
         </div>
-        {/* <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button> */}
+       
       </div>
-      <h4 className='textaftercarousel'>BONNE ARRIV22</h4>
+      <h4 className='textaftercarousel'>TaskMaster, votre solution ultime pour la gestion des tâches.</h4>
         <div className='second'>
 
-          <div class="card"style={{width: 18 +'rem'}} >
+          <div class="card" >
             <img src={Img1} class="card-img-top" alt="..." />
             <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text"> TaskMaster vous permettra de dresser des listes de tâches et toutes sortes d’autres listes pour ne rien oublier.</p>
             </div>
           </div>
 
-          <div class="card"style={{width: 18 +'rem'}} >
+          <div class="card" >
             <img src={Img1} class="card-img-top" alt="..." />
             <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text"> TaskMaster vous permettra de Gagner du temps parce que tu sais ce que tu as à faire presque en tout temps et que tu ne cherches pas tes choses lorsque tu en as besoin.</p>
             </div>
           </div>
 
-          <div class="card"style={{width: 18 +'rem'}} >
+          <div class="card" >
             <img src={Img1} class="card-img-top" alt="..." />
             <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text"> TaskMaster vous permettra d'Atteindre les objectifs qui nous tiennent complètement à cœur, c’est aussi une manière d’être plus épanoui.</p>
             </div>
           </div>
           </div>
